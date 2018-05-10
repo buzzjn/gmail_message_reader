@@ -43,14 +43,16 @@ Use regEx and cut when .?! as end of sentanse.
 def get_message_text():
 	messages = get_messages()
 
-	if len(messages) > 3:
-		print('Today you got more than 3 messages. Print all message.')
+	if len(messages) == 0:
+		print('Today no new messages.')
+	elif len(messages) > 3:
+		print('Today you got more than 3 messages. Print all message.\n')
 		for m in messages:
 			print( str(m['snippet'].encode('utf-8')))
-			print('-------')
+			print('--------------')
 			
 	elif len(messages) < 3:
-		print('Today you got less than 3 messages. Print each odd message.')
+		print('Today you got less than 3 messages. Print each odd message.\n')
 
 		for m in messages:
 			s = str(m['snippet'].encode('utf-8'))
@@ -63,6 +65,7 @@ def get_message_text():
 					print(sentList[0])
 					print(sentList[i])
 					print('-----------------')
+	
 
 
 if __name__ == '__main__':
