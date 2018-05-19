@@ -1,7 +1,11 @@
 # gmail_message_reader
 
-Short example using gmail api to read today's message snippets. 
-Use https://console.developers.google.com/flows/enableapi?apiid=gmail&pli=1 to register and get api credentials. Download json credentials and save in client_secret.json. The file has to be placed in the same dir as the program. 
+Short python example to read today email messages. The script uses Gmail API to log in to Gmail inbox and read all messages that were received that day.  
+
+Prerequisists of using the script:
+- Get authentication following <a href="https://developers.google.com/gmail/api/quickstart/python" rel="nofollow">Python Quickstart link</a>. File client_secret.json should be saved in the working directory.
+- Install google client library pip install --upgrade google-api-python-client.
+
 
 
 
